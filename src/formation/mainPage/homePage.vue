@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100%;height: 100%;position:relative;">
+  <div style="width: 100%;height: 200%;position:relative;">
 
     <div class="mainPage">
       <!--      <img src="../../assets/img.png"-->
@@ -27,21 +27,22 @@
       </div>
 
 
-      <div class="bottom">
-        <div class="texts">
-          —— 行业图谱 ——
-        </div>
-        <div class="map">
-
-        </div>
-        <div class="texts">
-          —— 热门标签 ——
-        </div>
-        <div class="tap">
-
-        </div>
+      <div class="texts">
+        —— 行业图谱 ——
+      </div>
+      <div class="tap">
+        <industry-maps/>
       </div>
 
+
+      <div class="texts">
+        —— 热门标签 ——
+      </div>
+      <div class="map">
+        <img src="../../assets/img_5.png" style="height: 100%;width: 70%">
+      </div>
+
+      <div style="width: 100%; justify-content: center;align-items: center;display: flex;opacity: 0.5">Copyright ©2008-2021 SCU, All Rights Reserved.</div>
     </div>
   </div>
 
@@ -51,15 +52,16 @@
 
 
 import Contents from "@/components/contents.vue";
+import IndustryMaps from "@/components/industryMaps.vue";
 </script>
 
 <style scoped>
 
 .mainPage {
-  height: 100%;
+  height: 50%;
   width: 100%;
   margin: 0;
-  /*!*border: 2px solid red;*!*/
+  /*border: 2px solid red;*/
 }
 
 
@@ -217,14 +219,28 @@ import Contents from "@/components/contents.vue";
   font-size: 40px;
 }
 
-.bottom{
-  border:1px solid rebeccapurple;
+.bottom {
+  /*border: 1px solid rebeccapurple;*/
   width: 100%;
 }
-.map{
 
+.map {
+  width: 100%;
+  /*border:2px solid red;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.tap{
 
+.tap {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*border: 2px solid rosybrown;*/
 }
+
 </style>

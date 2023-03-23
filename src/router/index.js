@@ -29,6 +29,11 @@ const routes = [
     path:'/industryMap',
     name:'industryMap',
     component: ()=>import('../components/industryMap.vue')
+  },
+  {
+    path:'/industryMaps',
+    name:'industryMaps',
+    component: ()=>import('../components/industryMaps.vue')
   }
 ]
 
