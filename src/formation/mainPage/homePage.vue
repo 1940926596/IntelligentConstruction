@@ -1,0 +1,230 @@
+<template>
+  <div style="width: 100%;height: 100%;position:relative;">
+
+    <div class="mainPage">
+      <!--      <img src="../../assets/img.png"-->
+      <!--           style="position:absolute; filter: brightness(0.5); z-index:-1; width: 100%;height: auto">-->
+      <div class="icon">
+
+        <img src="../../assets/logo.png" style="height: 50px;width: auto">
+        <div class="text1">智能建造平台</div>
+      </div>
+
+      <div class="extend">
+        <contents/>
+      </div>
+
+
+      <div class="texts">
+        —— 企业数据查询 ——
+      </div>
+      <div class="scan">
+
+        <div class="bt">
+          <div class="bt1">扫描录入</div>
+          <div class="bt2">直接录入</div>
+        </div>
+      </div>
+
+
+      <div class="bottom">
+        <div class="texts">
+          —— 行业图谱 ——
+        </div>
+        <div class="map">
+
+        </div>
+        <div class="texts">
+          —— 热门标签 ——
+        </div>
+        <div class="tap">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</template>
+
+<script setup>
+
+
+import Contents from "@/components/contents.vue";
+</script>
+
+<style scoped>
+
+.mainPage {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /*!*border: 2px solid red;*!*/
+}
+
+
+.icon {
+  height: 10%;
+  /*border: 1px solid black;*/
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text1 {
+  font: 30px Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: rgba(100, 203, 226, 1);
+}
+
+.extend {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  /*border: 1px solid oldlace;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.extend1 {
+  /*border: 2px solid rgba(100, 203, 226, 1);*/
+  height: 100%;
+  width: 8%;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 3%;
+}
+
+.summary1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+  /*border: 2px solid green;*/
+  font-size: 5px;
+}
+
+.scan {
+  height: 15%;
+  /*border: 1px solid bisque;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt {
+  height: 50%;
+  width: 60%;
+  /*border: 2px solid deeppink;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.bt1 {
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 8%);
+  height: 50%;
+  width: 20%;
+  /*border: 2px solid #2980b9;*/
+  color: #2980b9;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 1rem;
+  text-indent: 1rem;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.bt2 {
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 8%);
+  height: 50%;
+  width: 20%;
+  /*border: 2px solid #2980b9;*/
+  color: #2980b9;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 1rem;
+  text-indent: 1rem;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.bt1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  left: 0;
+  background-color: #2980b9;
+  transition: ease-in-out .5s;
+}
+
+.bt1:hover::before {
+  width: 100%;
+}
+
+.bt1:hover {
+  color: white;
+}
+
+.bt2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  left: 0;
+  background-color: #2980b9;
+  transition: ease-in-out .5s;
+}
+
+.bt2:hover::before {
+  width: 100%;
+}
+
+.bt2:hover {
+  color: white;
+}
+
+.texts {
+  /*border: 1px solid rebeccapurple;*/
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.bottom{
+  border:1px solid rebeccapurple;
+  width: 100%;
+}
+.map{
+
+}
+.tap{
+
+}
+</style>
