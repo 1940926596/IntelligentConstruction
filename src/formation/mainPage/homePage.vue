@@ -2,13 +2,21 @@
   <div style="width: 100%;height: 200%;position:relative;">
 
     <div class="mainPage">
-      <!--      <img src="../../assets/img.png"-->
-      <!--           style="position:absolute; filter: brightness(0.5); z-index:-1; width: 100%;height: auto">-->
-      <div class="icon">
+      <img src="../../assets/img.png"
+           style="position:absolute; filter: brightness(0.5); z-index:-1; width: 100%;height: auto">
 
-        <img src="../../assets/logo.png" style="height: 50px;width: auto">
-        <div class="text1">智能建造平台</div>
+      <div class="header">
+        <div class="icon">
+          <img src="../../assets/logo.png" style="height: 50px;width: auto">
+          <div class="text1">智能建造平台</div>
+        </div>
+
+        <div class="register">
+          <div class="register1"> 登录</div>
+        </div>
+
       </div>
+
 
       <div class="extend">
         <contents/>
@@ -27,7 +35,7 @@
       </div>
 
 
-      <div class="texts">
+      <div class="texts2">
         —— 行业图谱 ——
       </div>
       <div class="tap">
@@ -35,14 +43,17 @@
       </div>
 
 
-      <div class="texts">
+      <div class="texts3">
         —— 热门标签 ——
       </div>
+
       <div class="map">
         <img src="../../assets/img_5.png" style="height: 100%;width: 70%">
       </div>
 
-      <div style="width: 100%; justify-content: center;align-items: center;display: flex;opacity: 0.5">Copyright ©2008-2021 SCU, All Rights Reserved.</div>
+      <div style="width: 100%; justify-content: center;align-items: center;display: flex;opacity: 0.5">Copyright
+        ©2008-2021 SCU, All Rights Reserved.
+      </div>
     </div>
   </div>
 
@@ -64,14 +75,51 @@ import IndustryMaps from "@/components/industryMaps.vue";
   /*border: 2px solid red;*/
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  /*border:1px solid darkblue;*/
+}
 
 .icon {
-  height: 10%;
+  height: 100%;
   /*border: 1px solid black;*/
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.register{
+  /*border:1px solid saddlebrown;*/
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font: 20px Georgia, "Times New Roman", Times, serif;
+  height: 50%;
+  width: 50%;
+  border-radius: 10%;
+  border:2px solid rgba(100,203,226);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.register1:hover{
+  color:  rgba(43,92,164);
+  background-color: white;
+  width: 55%;
+  height: 55%;
 }
 
 .text1 {
@@ -87,6 +135,7 @@ import IndustryMaps from "@/components/industryMaps.vue";
   /*border: 1px solid oldlace;*/
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 }
 
 .extend1 {
@@ -212,12 +261,31 @@ import IndustryMaps from "@/components/industryMaps.vue";
 
 .texts {
   /*border: 1px solid rebeccapurple;*/
-  margin-top: 40px;
+  margin-top: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
 }
+
+.texts2 {
+  /*border: 1px solid rebeccapurple;*/
+  /*margin-top: 10px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.texts3 {
+  /*border: 1px solid rebeccapurple;*/
+  /*margin-top: 10px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
 
 .bottom {
   /*border: 1px solid rebeccapurple;*/
@@ -226,7 +294,7 @@ import IndustryMaps from "@/components/industryMaps.vue";
 
 .map {
   width: 100%;
-  /*border:2px solid red;*/
+  /*border: 2px solid red;*/
   display: flex;
   justify-content: center;
   align-items: center;

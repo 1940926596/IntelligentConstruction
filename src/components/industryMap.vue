@@ -37,6 +37,7 @@ const sites= [
   height: 20%;
   width: 100%;
   background-image: url("../assets/sci1.png");
+  background-repeat: no-repeat;
   /*border:1px solid rebeccapurple;*/
 }
 
