@@ -12,14 +12,15 @@
         </div>
 
         <div class="register">
-          <div class="register1"> 登录</div>
+          <div class="register1" @click="change1"> 登录
+          </div>
         </div>
 
       </div>
 
 
       <div class="extend">
-        <contents/>
+        <contents @click="popUp"/>
       </div>
 
 
@@ -29,8 +30,8 @@
       <div class="scan">
 
         <div class="bt">
-          <div class="bt1">扫描录入</div>
-          <div class="bt2">直接录入</div>
+          <div class="bt1" @click="popUp">扫描录入</div>
+          <div class="bt2" @click="popUp">直接录入</div>
         </div>
       </div>
 
@@ -51,19 +52,58 @@
         <img src="../../assets/img_5.png" style="height: 100%;width: 70%">
       </div>
 
-      <div style="width: 100%; justify-content: center;align-items: center;display: flex;opacity: 0.5">Copyright
-        ©2008-2021 SCU, All Rights Reserved.
+      <div
+          style="width: 100%; justify-content: center;align-items: center;display: flex;opacity: 0.5;margin-bottom: 10px">
+        Copyright
+        ©2022-2023 SCU, All Rights Reserved.
       </div>
+
+      <div style="height: 10px"/>
     </div>
+
+    <s3-layer v-model="store.state.ifLoginPopup" area="['520px', '340px']" :type="0" :shadeClose="true" :resize="false"
+              :scrollbar="false" :move="false" class="s3">
+      <user-login/>
+    </s3-layer>
+
+    <s3-layer v-model="store.state.ifRegisterPopup" area="['520px', '340px']" :type="0" :shadeClose="true"
+              :resize="false"
+              :scrollbar="false" :move="false" class="s3">
+      <user-register/>
+    </s3-layer>
+
   </div>
+
 
 </template>
 
 <script setup>
-
-
 import Contents from "@/components/contents.vue";
 import IndustryMaps from "@/components/industryMaps.vue";
+import {layer} from "vue3-layer";
+import UserLogin from "@/formation/login/userLogin.vue";
+import UserRegister from "@/formation/login/userRegister.vue";
+
+const popUp = () => {
+  layer.msg("功能尚未实现 ,sry 😄");
+}
+
+import {useStore} from 'vuex'
+import {onMounted, onUpdated} from "vue";
+
+import store from "@/store";
+
+// const store = useStore()  // 该方法用于返回store 实例
+
+onMounted(()=>{
+  console.log(store)  // store 实例对象
+  console.log(store.state.ifRegisterPopup)  // store 实例对象
+})
+
+const change1=()=>{
+  store.commit('setLogin',true)
+  console.log(store)
+}
 </script>
 
 <style scoped>
@@ -75,7 +115,8 @@ import IndustryMaps from "@/components/industryMaps.vue";
   /*border: 2px solid red;*/
 }
 
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +133,8 @@ import IndustryMaps from "@/components/industryMaps.vue";
   justify-content: center;
   align-items: center;
 }
-.register{
+
+.register {
   /*border:1px solid saddlebrown;*/
   width: 10%;
   height: 100%;
@@ -101,7 +143,7 @@ import IndustryMaps from "@/components/industryMaps.vue";
   align-items: center;
 }
 
-.register1{
+.register1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,13 +152,13 @@ import IndustryMaps from "@/components/industryMaps.vue";
   height: 50%;
   width: 50%;
   border-radius: 10%;
-  border:2px solid rgba(100,203,226);
+  border: 2px solid rgba(100, 203, 226);
   transition: 0.1s;
   cursor: pointer;
 }
 
-.register1:hover{
-  color:  rgba(43,92,164);
+.register1:hover {
+  color: rgba(43, 92, 164);
   background-color: white;
   width: 55%;
   height: 55%;

@@ -34,6 +34,11 @@ const routes = [
     path:'/industryMaps',
     name:'industryMaps',
     component: ()=>import('../components/industryMaps.vue')
+  },
+  {
+    path:'/login',
+    name:'login',
+    component: ()=>import('../formation/login/userLogin.vue')
   }
 ]
 
