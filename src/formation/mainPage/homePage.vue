@@ -36,20 +36,24 @@
       </div>
 
 
+      <div class="texts3">
+        —— 企业数字画像 ——
+      </div>
+
+      <div style="height: 30px"/>
+      <div class="map">
+        <!--        <img src="../../assets/img_5.png" style="height: 100%;width: 70%">-->
+        <echart1/>
+      </div>
+
+      <div style="height: 30px"/>
+
       <div class="texts2">
         —— 行业图谱 ——
       </div>
+      <div style="height: 30px"/>
       <div class="tap">
         <industry-maps/>
-      </div>
-
-
-      <div class="texts3">
-        —— 热门标签 ——
-      </div>
-
-      <div class="map">
-        <img src="../../assets/img_5.png" style="height: 100%;width: 70%">
       </div>
 
       <div
@@ -58,7 +62,7 @@
         ©2022-2023 SCU, All Rights Reserved.
       </div>
 
-      <div style="height: 10px"/>
+      <div style="height: 30px"/>
     </div>
 
     <s3-layer v-model="store.state.ifLoginPopup" area="['520px', '340px']" :type="0" :shadeClose="true" :resize="false"
@@ -92,16 +96,17 @@ import {useStore} from 'vuex'
 import {onMounted, onUpdated} from "vue";
 
 import store from "@/store";
+import Echart1 from "@/components/echart1.vue";
 
 // const store = useStore()  // 该方法用于返回store 实例
 
-onMounted(()=>{
+onMounted(() => {
   console.log(store)  // store 实例对象
   console.log(store.state.ifRegisterPopup)  // store 实例对象
 })
 
-const change1=()=>{
-  store.commit('setLogin',true)
+const change1 = () => {
+  store.commit('setLogin', true)
   console.log(store)
 }
 </script>
@@ -329,13 +334,9 @@ const change1=()=>{
 }
 
 
-.bottom {
-  /*border: 1px solid rebeccapurple;*/
-  width: 100%;
-}
-
 .map {
   width: 100%;
+  height: 70%;
   /*border: 2px solid red;*/
   display: flex;
   justify-content: center;

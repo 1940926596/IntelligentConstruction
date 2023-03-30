@@ -15,6 +15,5 @@ app.component('s3-layer', s3Layer);
 app.use(ElementPlus)
 app.use(store)
 app.use(router)
-app.config.globalProperties.$login=false;
 
 app.mount('#app')

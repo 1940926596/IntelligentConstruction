@@ -39,6 +39,16 @@ const routes = [
     path:'/login',
     name:'login',
     component: ()=>import('../formation/login/userLogin.vue')
+  },
+  {
+    path:'/chart',
+    name:'chart',
+    component: ()=>import('../components/echart1.vue')
+  },
+  {
+    path:'/score',
+    name:'score',
+    component: ()=>import('../components/score.vue')
   }
 ]
 
