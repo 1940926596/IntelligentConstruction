@@ -6,7 +6,7 @@
 
 <script setup>
 import * as echarts from 'echarts';
-import {onMounted, onUpdated} from "vue";
+import {onMounted, onUpdated, reactive, ref} from "vue";
 
 const props = defineProps(
     {
@@ -32,7 +32,7 @@ let option;
 let chartDom;
 let myChart;
 onUpdated(() => {
-  console.log(option)
+  // console.log(option)
   option.data = changeData();
   myChart.setOption(option);
 
@@ -43,9 +43,9 @@ onUpdated(() => {
 
 onMounted(() => {
 
-  console.log(props.value1)
-  chartDom=document.getElementById('main');
-  myChart=echarts.init(chartDom);
+  // console.log(props.value1)
+  chartDom = document.getElementById('main');
+  myChart = echarts.init(chartDom);
 
 
   option = {
@@ -82,7 +82,6 @@ onMounted(() => {
   };
 
   option && myChart.setOption(option);
-
 })
 
 
