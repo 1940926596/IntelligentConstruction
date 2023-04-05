@@ -22,6 +22,8 @@ const sites= [
   ['工程造价咨询企业资质等级','工程监理','工程咨询'],['工程设计','企业设立分公司总数','企业首次取得现有造价咨询企业资质时间'],['期末从业人员合计','正式聘用人员','临时工作人员'],['一级注册造价咨询师','二级注册造价工程师','期末其他专业注册执业人员'], ['交通运输工程专业','水利工程专业','土木建筑工程专业'] ,['高级职称人员','中级职称人员','初级职称人员']
 ]
 
+// console.log(props.text1)
+
 const props = defineProps({
   text1:[],
   text2: String,
@@ -53,11 +55,11 @@ const props = defineProps({
 }
 
 .bottom1{
-  padding-top: 10px;
-
+  padding-top: 40px;
   /*border:1px solid red ;*/
   width: 100%;
-  height: 80%;
+  height: 60%;
+
 }
 
 .text11{
@@ -73,8 +75,9 @@ const props = defineProps({
 }
 
 .text21{
+  font: 16px Georgia, "Times New Roman", Times, serif;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 </style>

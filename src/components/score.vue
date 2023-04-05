@@ -24,10 +24,6 @@ const changeData = () => {
   ]
 }
 
-
-const changeDatas = () => {
-
-}
 let option;
 let chartDom;
 let myChart;

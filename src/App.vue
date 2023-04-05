@@ -37,7 +37,6 @@ body, html {
   background-image: url("./assets/loginBackground.png") !important;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 </style>
