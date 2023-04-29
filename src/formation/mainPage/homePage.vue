@@ -89,7 +89,7 @@ import UserLogin from "@/formation/login/userLogin.vue";
 import UserRegister from "@/formation/login/userRegister.vue";
 import {useStore} from 'vuex'
 import {onMounted, onUpdated} from "vue";
-import store from "@/store";
+// import store from "@/store";
 import Echart1 from "@/components/echart1.vue";
 
 
@@ -97,7 +97,7 @@ const popUp = () => {
   layer.msg("功能尚未实现 ,sry 😄");
 }
 
-// const store = useStore()  // 该方法用于返回store 实例
+const store = useStore()  // 该方法用于返回store 实例
 
 onMounted(() => {
   console.log(store)  // store 实例对象

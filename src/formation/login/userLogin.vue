@@ -10,16 +10,17 @@
     <div class="footer">
       <form class="texts">
         <div class="account">账号：
-          <input style="width: 130px;height: 20px" />
+          <input style="width: 130px;height: 20px"/>
         </div>
         <div class="pwd">密码：
-          <input style="width: 130px;height: 20px" />
+          <input style="width: 130px;height: 20px"/>
         </div>
       </form>
       <div class="yes" @click="popUp">登录</div>
     </div>
 
-    <div style="height: 10%;display: flex;align-items: center;justify-content: flex-start;margin-left: 20px;color: rgba(150,150,150)" >
+    <div
+        style="height: 10%;display: flex;align-items: center;justify-content: flex-start;margin-left: 20px;color: rgba(150,150,150)">
       <div class="register" @click="change1">注册账号</div>
     </div>
   </div>
@@ -28,12 +29,19 @@
 
 <script setup>
 import store from "@/store";
-import {layer} from "vue3-layer"; // 引入useStore 方法
+import {layer} from "vue3-layer";
+import {useStore} from "vuex";
+import {onMounted} from "vue"; // 引入useStore 方法
 
-console.log(store.state)
-const change1=()=>{
-  store.commit('setLogin',false);
-  store.commit('setRegister',true);
+// const store = useStore()  // 该方法用于返回store 实例
+
+onMounted(() => {
+  console.log(store)
+})
+
+const change1 = () => {
+  store.commit('setLogin', false);
+  store.commit('setRegister', true);
   console.log(store.state)
 }
 
@@ -127,11 +135,13 @@ const popUp = () => {
 
 }
 
-.register{
+.register {
   cursor: pointer;
 }
-.register:hover{
+
+.register:hover {
   border-bottom: 1px solid black;
 }
+
 /*205,207,208*/
 </style>

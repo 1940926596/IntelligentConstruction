@@ -27,8 +27,16 @@
 
 <script setup>
 import store from "@/store";
-import {layer} from "vue3-layer"; // 引入useStore 方法
-console.log(store.state)
+import {layer} from "vue3-layer";
+import {useStore} from "vuex";
+import {onMounted} from "vue"; // 引入useStore 方法
+// const store = useStore()  // 该方法用于返回store 实例
+
+onMounted(()=>{
+  console.log(store)
+})
+
+
 const change1=()=>{
   store.commit('setLogin',true);
   store.commit('setRegister',false);

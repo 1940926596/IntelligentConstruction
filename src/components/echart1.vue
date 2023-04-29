@@ -2,7 +2,7 @@
   <div class="main3">
     <div class="main4">
 
-      <div class="left" ref="lef" id="left1">
+      <div class="left">
 
       </div>
 
